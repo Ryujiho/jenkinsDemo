@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -20,7 +19,7 @@ pipeline {
     }
     post {
         always { 
-            echo "pipeline job done"
+            echo "pipeline job done!!"
         }
     }
 }
