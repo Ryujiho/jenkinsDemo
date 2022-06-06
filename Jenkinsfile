@@ -1,25 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        label "demoAgent"
+    }
+
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
-                build 'SeleniumMaven'
+                echo "202206071400"
             }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-    post {
-        always { 
-            echo "pipeline job done!!"
         }
     }
 }
